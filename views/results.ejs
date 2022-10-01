@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/10ca723294.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <tr><h1><img class="logo" src="../img/onlysubs.png" alt="onlysubs logo"></h1></tr> 
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   
+    <table>
+        <tbody>
+            <tr>
+                <th class= 'menuBar'>Image</th>
+                <th class= 'menuBar'>Make</th>
+                <th class= 'menuBar'>Year</th>
+                <th class= 'menuBar'>Date Dropped</th>
+                <th class= 'menuBar'>Yard Location</th>
+                <th class= 'menuBar'>Row</th>
+                <th class= 'menuBar'>Vin</th>
+                <th class= 'menuBar'>Favorite</th>
+              </tr>
+              <tbody>
+            <% scraped.forEach(el => { %>
+                <tr class="todoItem">
+                    
+                    <td><a href="<%= el[15] %>"><img id="image" src="<%= el[14] %>" alt="<%= el[14] %>"></a></td>
+                
+                  <td><span><%= el[2]%><br><%=  el[3] %></span></td>
+                  
+                  <td><span><%= el[1] %></span></td>
+                  <td><span><%= el[5] %></span></td>
+                 
+                  <td><span><%= el[4] %></span></td>
+                 
+                  <td><span><%= el[10] %></span></td>
+                 
+                  <td><span><%= el[6] %></span></td>
+
+                  <td><form action="/favorites" method="Post"><button data-id='<%= el[6] %>' class="fav">Add Favorite</button></span></form></td>
+                </tr>
+              <% }) %>
+            </tbody>
+        </table>
+   
+    <table class="formAndButton">
+        <tbody>
+            <td class="bottom">
+                <form action="/results/getResults" method="POST">
+                    <label for="Years">Year (ex. "1994-99, 77")</label>
+                    <input id="years" type="text" name="years">
+
+                    <label for="distance">Search Withing How Many Miles of?</label>
+                    <input id="zip" type="text" name="zip">
+
+                    <select id="miles" name="miles">
+                        <option value="10">10 Miles</option>
+                        <option value="25">25 Miles</option>
+                        <option value="50">50 Miles</option>
+                        <option value="100">100 Miles</option>
+                        <option value="500">500 Miles</option>
+                    </select>
+                    <td class="bottom"><button id="activate" class="button">New Search</button></td>
+                </form>
+            </td>
+
+            
+        
+            <!-- <span><%= scraped %></span> -->
+
+            <td class="bottom"><a href="/logout">Logout</a></td>
+        </tbody>
+    </table>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
