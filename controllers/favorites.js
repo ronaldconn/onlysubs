@@ -16,6 +16,7 @@ module.exports = {
         yardLocation: req.body.location,
         row: req.body.row,
         vin: req.body.vin,
+        make: req.body.make,
         
       })
         console.log("Favorite has been added!");
@@ -26,10 +27,22 @@ module.exports = {
   },
   getFavorites: async (req, res) => {
 		try {
-			const comment = await Favorite.find({ favorite: req.body });
+			const comment = await Favorite.find({ favorite: req.body.id });
 			res.render("myfavorites.ejs", { favorite: comment });
 		} catch (err) {
 			console.log(err);
 		}
-}
+  },
+  deleteFavorite: async (req, res) => {
+		try {
+			// Find post by id
+			let favorite = await Favorite.findById({ _id: req.params.id });
+			// Delete post from db
+			await Favorite.remove({ _id: req.params.id });
+			console.log("Deleted Post");
+			res.redirect("/myfavorites");
+		} catch (err) {
+			res.redirect("/myfavorites");
+		}
+	}, 
 }

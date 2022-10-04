@@ -22,4 +22,8 @@ router.post("/signup", authController.postSignup);
 //added
 router.get('/api', ensureAuth, resultsController.getApi)
 router.post("/favorites", favoritesController.addFavorite);
+router.get("/myfavorites", favoritesController.getFavorites);
+
+router.get("/deleteFavorite/:id", favoritesController.deleteFavorite);
+// router.get("/deleteFavorite/:id", favoritesController.getFavorites);
 module.exports = router;

@@ -2,7 +2,28 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-    width:100%
+  width:100%;
+  color: rgb(0, 136, 213)
+}
+
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px
+}
+
+.nav div{
+  padding: 10px;
+}
+
+.nav div a{
+  color: black;
+  border: 1px;
+  border-style: solid;
+  border-radius: 5%;
+  box-shadow: 5px 5px rgb(0, 171, 246);
+  background-color:  rgb(0, 136, 213);
+  padding: 7px;
 }
 
 body{
@@ -41,7 +62,7 @@ a.login {
     flex-direction: row;
     justify-content: center;
   }
-  .btn-index{
+  /* .btn-index{
     cursor: pointer;
     outline: 0;
     color: #fff;
@@ -56,7 +77,7 @@ a.login {
     font-size: 1rem;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;            
-  }
+  } */
 
   
 
@@ -75,7 +96,7 @@ a.login {
   }
 
 th, td {
-    padding: 10px 20px;
+    padding: 5px 10px;
     
 }
 
@@ -83,6 +104,7 @@ table {
     border-collapse:separate;
     border:solid black 1px;
     border-radius:6px;
+    margin-bottom: 1em;
 }
 
 td.bottom{
@@ -90,3 +112,4 @@ td.bottom{
   border:none
 
 }
+

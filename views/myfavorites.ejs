@@ -13,7 +13,7 @@
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    
-    <h2>My Favorites</h2>
+    <h1>My Favorites</h1>
 
     <table>
         <tbody>
@@ -27,7 +27,31 @@
                 <th class= 'menuBar'>Vin</th>
               </tr>
               <tbody>
-           <span>favorite</span>
+
+            <tbody>
+                <% favorite.forEach(el => { if (el.imageUrl != null) {%>
+                    <tr class="todoItem">
+                        
+                        <td><img id="image" src="<%= el.imageUrl %>" alt="<%= el.imageUrl %>"></td>
+                    
+                      <td><span><%= el.make %></span></td>
+                      
+                      <td><span><%= el.year %></span></td>
+                      <td><span><%= el.dateDropped %></span></td>
+                     
+                      <td><span><%= el.yardLocation %></span></td>
+                     
+                      <td><span><%= el.row %></span></td>
+                     
+                      <td><span><%= el.vin %></span></td>
+                  
+                  <td>
+                  <form action="/deleteFavorite/<%= el._id %>" method="DELETE" class="col-3">
+                    <button class="btn btn-primary fa fa-trash" type="submit"></button>
+                  </form></td>
+                </tr>
+                  <% }}) %>
+                </tbody>
         </table>
    
     <table class="formAndButton">
@@ -50,10 +74,6 @@
                     <td class="bottom"><button id="activate" class="button">New Search</button></td>
                 </form>
             </td>
-
-            
-        
-            <!-- <span><%= scraped %></span> -->
 
             <td class="bottom"><a href="/logout">Logout</a></td>
         </tbody>

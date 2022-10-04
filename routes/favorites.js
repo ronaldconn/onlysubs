@@ -5,8 +5,7 @@ const resultsController = require("../controllers/results");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Post Routes - simplified for now
-// router.post("/favorites", favoritesController.addFavorite);
-
+// router.delete("/deleteFavorite/:id", favoritesController.deleteFavorite);
 // router.get('/myfavorites', resultsController.getFavorites)
 
 module.exports = router;
