@@ -79,9 +79,7 @@ validator
  
 # Lessons Learned
 
-
-We hope you enjoy our app. :)
-
+coming soon!
 
 # Future optimizations
 
