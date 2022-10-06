@@ -15,7 +15,7 @@ const resultsRoutes = require('./routes/results')
 const favoritesRoutes = require('./routes/favorites')
 
 //Use .env file in config folder
-require("dotenv").config({ path: "./config/.env" });
+require("dotenv").config({ path: "./.env" });
 
 // Passport config
 require("./config/passport")(passport);
