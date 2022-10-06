@@ -1,4 +1,4 @@
-# Only Subarus - the versatile pm app for any team
+# Only Subarus
 
 ![gif of app in action](https://raw.githubusercontent.com/ronaldconn/onlysubs/main/onlysubs.gif)
 
