@@ -1,4 +1,4 @@
-# Only Subarus - the versatile pm app for any team
+# Only Subarus - The Junkyard Companion
 
 ![gif of app in action](https://raw.githubusercontent.com/ronaldconn/onlysubs/main/onlysubs.gif)
 
@@ -7,7 +7,7 @@ https://onlysubs.onrender.com<br>
 
 # Introduction
 
-The OnlySubarus app is an app built using the MVC Architecture. 
+The OnlySubarus app is an app built using MVC Architecture. It has user authentication and security walls for passwords and db access.
 
 The app searches all junkyards within the immediate area (50 miles of user location) for 90's subarus. There app is not bulky and there are no ads. This allows the user to find the car they wish to pull parts from.
 
@@ -19,12 +19,12 @@ OnlySubarus was born.
 
 The current version is specifically for 90's subarus.
 
-I plan on making this app have mulitple versions. There will be a basic app that can search any car make as well. Perfect for anyone that has an old car and needs to find parts.
+I plan on making this app have mulitple versions. There will be a basic app that can search any car make as well. Perfect for anyone that has an old car and needs to find parts quickly while lost in the junkyard.
 
 # How It's Made:
-**Tech used:** HTML, CSS, JavaScript, EJS, Node.js, MongoDB, and Mongoose.
+**Tech used:** HTML, CSS, JavaScript, EJS, Node.js, MongoDB, Mongoose, Cloudinary, Axios, Cheerio, JQuery, Bcrypt, Express, Multer, Morgan, and Nodemon.
 
-This app utilizes a secure Mongo.DB database to hold user info as well as action items or task.
+This app utilizes a secure Mongo.DB database to hold user info as well as favorites.
 
 The logic is written in JavaScript and thanks to Node.js the backend code documents are also written with JS.
 
