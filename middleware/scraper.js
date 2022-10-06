@@ -18,20 +18,20 @@ const scraper = {
       // let searchs =["https://row52.com/Search/?YMMorVin=YMM&Year=1996&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=25", "https://row52.com/Search/?YMMorVin=YMM&Year=1997&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=25", "https://row52.com/Search/?YMMorVin=YMM&Year=1998&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=25", "https://row52.com/Search/?YMMorVin=YMM&Year=1999&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=25","https://row52.com/Search/?YMMorVin=YMM&Year=2000&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=25", "https://row52.com/Search/?YMMorVin=YMM&Year=1996&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=10", "https://row52.com/Search/?YMMorVin=YMM&Year=1997&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=10", "https://row52.com/Search/?YMMorVin=YMM&Year=1998&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=10", "https://row52.com/Search/?YMMorVin=YMM&Year=1999&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=10"
       // ]
 
-      let searchs =["https://row52.com/Search/?YMMorVin=YMM&Year=1995-1999&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=25"
-      ]
+      let url ="https://row52.com/Search/?YMMorVin=YMM&Year=1995-1999&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&ZipCode=94530&Page=1&ModelId=&MakeId=226&LocationId=&IsVin=false&Distance=50"
+      
 
-      function getRandomItem(arr) {
-        // get random index value
-        const randomIndex = Math.floor(Math.random() * arr.length);
-        // get random item
-        const item = arr[randomIndex];
-        return item;
-      }
+      // function getRandomItem(arr) {
+      //   // get random index value
+      //   const randomIndex = Math.floor(Math.random() * arr.length);
+      //   // get random item
+      //   const item = arr[randomIndex];
+      //   return item;
+      // }
 
-      //stores the random source URL in the result variable
-      const result = getRandomItem(searchs);
-      let url = result;
+      // //stores the random source URL in the result variable
+      // const result = getRandomItem(searchs);
+      // let url = result;
 
       return axios.get(url).then(response => {
           const html = response.data;
