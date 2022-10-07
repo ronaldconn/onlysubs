@@ -105,6 +105,14 @@ td.bottom{
   margin: .3em;
 }
 
+.info{  
+  display: flex;
+  padding: 10px;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-around;
+  }
+
 @media only screen and (max-width: 900px) {
   /* For tablets: */
   table{
@@ -172,5 +180,5 @@ td.bottom{
       flex-direction: column;
       align-content: center;
       align-items: stretch;
-}
+  }
 }

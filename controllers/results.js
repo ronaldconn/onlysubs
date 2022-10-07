@@ -50,7 +50,7 @@ module.exports = {
         console.log(req.user.mainSearch)
         let url = req.user.mainSearch
         if (running == false) {
-            console.log("i hate this")
+            console.log("running check is false")
              
         try{
             // await scrapData
