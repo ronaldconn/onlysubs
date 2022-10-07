@@ -57,10 +57,13 @@
             <% }) %>
         </tbody>
     </table>
-   
+    <div class="nav">
+        <p>&#8595; This will show a new search but will not be saved &#8595;</p>
+    </div>
     <table class="formAndButton">
         <tbody class="footer">
             <td class="bottom">
+               
                 <form action="/results/getResults" method="POST">
                     <label for="Years">Year (ex. "1994-99, 77")</label>
                     <input id="years" type="text" name="years">
@@ -86,6 +89,10 @@
             <td class="bottom"><a href="/logout">Logout</a></td>
         </tbody>
     </table>
+    <div class="nav"><p>&#8595; This will change the main search that shows up at Login &#8595;</p></div>
+    <div class="nav">
+        <div><a href="/setup">Change Main Search</a></div>       
+    </div>  
 
     <script src="../js/main.js"></script>
 </body>

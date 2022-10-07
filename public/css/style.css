@@ -126,7 +126,7 @@ td.bottom{
     border-style: solid;
     border-radius: 6px;
     margin: 1em;
-    background: rgb(236, 240, 244)
+    background: white
   }
   td.make:before { 
     content: "Make: ";

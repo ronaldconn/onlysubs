@@ -47,16 +47,16 @@ module.exports = {
 
     getResults: async (req,res)=>{
     
-        console.log(req.body.newSearchUrl)
-        let url = req.body.newSearchUrl 
+        console.log(req.user.mainSearch)
+        let url = req.user.mainSearch
         if (running == false) {
             console.log("i hate this")
              
         try{
             // await scrapData
             console.log("See get todos function?")
-                let results = await scrapData.scrape
-                let searchFunc = await results()
+                let results = await scrapData.scrape(url)
+                let searchFunc = await results
                 console.log(searchFunc)
                 res.render('results.ejs', {scraped: searchFunc})
             

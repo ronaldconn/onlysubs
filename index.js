@@ -64,6 +64,8 @@ app.use('/', mainRoutes);
 app.use('/results', resultsRoutes);
 app.use('/api', mainRoutes);
 app.use('/favorites', favoritesRoutes);
+app.use('/setup', mainRoutes)
+app.use('/getSearchInfo', mainRoutes)
 
 //Server Running
 app.listen(process.env.PORT, () => {

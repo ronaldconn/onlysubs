@@ -8,6 +8,7 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 //
 const scrapData = require('../middleware/scraper.js') 
 const resultsController = require('../controllers/results')
+const setupController = require('../controllers/setup')
 
 //Main Routes - simplified for now
 router.get("/", homeController.getIndex);
@@ -23,6 +24,8 @@ router.post("/signup", authController.postSignup);
 router.get('/api', ensureAuth, resultsController.getApi)
 router.post("/favorites", favoritesController.addFavorite);
 router.get("/myfavorites", favoritesController.getFavorites);
+router.get("/setup", homeController.getSetup);
+router.post("/getSearchInfo", setupController.getSearchInfo);
 
 router.get("/deleteFavorite/:id", favoritesController.deleteFavorite);
 // router.get("/deleteFavorite/:id", favoritesController.getFavorites);
