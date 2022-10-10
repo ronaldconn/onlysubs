@@ -204,7 +204,7 @@ const scraper = {
   //second method
 
   search: async (req,res)=>{ 
-    console.log("OMG IT IS WORKING???")
+    console.log("scraper.search is running")
     await req
     return axios.get(req).then(response => {
         const html = response.data;

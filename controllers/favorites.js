@@ -33,7 +33,6 @@ module.exports = {
         console.log("Favorite already added!");
       }
     
-  
     } catch (err) {
       console.log(err);
     }
