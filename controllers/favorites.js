@@ -7,7 +7,14 @@ module.exports = {
     
     try {
       console.log(req.body)
+      const checking = await Favorite.find({ 
+        vin: req.body.vin,
+        userId: req.user.id });
       
+      console.log(checking)
+
+      if (checking == false){
+
         await Favorite.create({
 
           imageUrl: req.body.img,
@@ -22,6 +29,11 @@ module.exports = {
         })
         console.log("Favorite has been added!");
         // res.redirect("/results");
+      }else {
+        console.log("Favorite already added!");
+      }
+    
+  
     } catch (err) {
       console.log(err);
     }
