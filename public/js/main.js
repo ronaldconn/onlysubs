@@ -8,10 +8,12 @@ Array.from(addButton).forEach((el)=>{
 async function wrenchClick(){
 
     const whichButton = this
-    console.log("fuck this")
+    console.log("wrenchClick() called")
+    
 
     try{
-        const response = await fetch('/favorites', {
+        
+        await fetch('/favorites', {
             method: 'post',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
@@ -19,17 +21,16 @@ async function wrenchClick(){
                 'vin': whichButton.parentNode.parentNode.parentNode.children[6].innerText,
                 'row': whichButton.parentNode.parentNode.parentNode.children[5].innerText,
                 'location': whichButton.parentNode.parentNode.parentNode.children[4].innerText,
-               'date': whichButton.parentNode.parentNode.parentNode.children[3].innerText,
-               'year': whichButton.parentNode.parentNode.parentNode.children[2].innerText,
+                'date': whichButton.parentNode.parentNode.parentNode.children[3].innerText,
+                'year': whichButton.parentNode.parentNode.parentNode.children[2].innerText,
                 'make': whichButton.parentNode.parentNode.parentNode.children[1].innerText,
                 'img': whichButton.parentNode.parentNode.parentNode.children[0].firstChild.childNodes[0].alt,
                 
-            })
-        })
-        const data = await response.json()
-        console.log(data)
-        alert("favorite added")
-        location.reload()
+            }) 
+        }).then(
+        alert("Favorite added")
+        )
+    
        
 
     }catch(err){

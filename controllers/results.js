@@ -16,7 +16,7 @@ module.exports = {
       
         
                     try{
-                    console.log("See this now baby??!")
+                    console.log("sending search url to middleware-scrape")
 
                     // console.log(url)
                     let results = await scrapData.search( newSearchUrl )
@@ -67,7 +67,7 @@ module.exports = {
                     console.log(searchVariable)
                     let url = searchVariable
                     try{
-                    console.log("See this now baby??!")
+                    console.log("See this now??!")
 
                     // console.log(url)
                     let results = await scrapData.search( url )

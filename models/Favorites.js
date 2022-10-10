@@ -28,6 +28,9 @@ const FavoritesSchema = new mongoose.Schema({
   make: {
     type: String,
   },
+  userId: {
+    type: String,
+  },
   post: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Post",

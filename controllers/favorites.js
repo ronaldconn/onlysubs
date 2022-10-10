@@ -8,27 +8,33 @@ module.exports = {
     try {
       console.log(req.body)
       
-      await Favorite.create({
+        await Favorite.create({
 
-        imageUrl: req.body.img,
-        year: req.body.year,
-        dateDropped: req.body.date,
-        yardLocation: req.body.location,
-        row: req.body.row,
-        vin: req.body.vin,
-        make: req.body.make,
-        
-      })
+          imageUrl: req.body.img,
+          year: req.body.year,
+          dateDropped: req.body.date,
+          yardLocation: req.body.location,
+          row: req.body.row,
+          vin: req.body.vin,
+          make: req.body.make,
+          userId: req.user.id
+          
+        })
         console.log("Favorite has been added!");
-        res.redirect("/results");
+        // res.redirect("/results");
     } catch (err) {
       console.log(err);
     }
   },
   getFavorites: async (req, res) => {
 		try {
-			const comment = await Favorite.find({ favorite: req.body.id });
-			res.render("myfavorites.ejs", { favorite: comment });
+      console.log(req.user._id)
+			const favorite = await Favorite.find({
+          userId: req.user._id
+      });
+      await Favorite.remove({ year: null })
+			res.render("myfavorites.ejs", { favorite: favorite });
+      console.log(favorite)
 		} catch (err) {
 			console.log(err);
 		}
@@ -39,6 +45,7 @@ module.exports = {
 			let favorite = await Favorite.findById({ _id: req.params.id });
 			// Delete post from db
 			await Favorite.remove({ _id: req.params.id });
+      // await Favorite.remove({ year: null });
 			console.log("Deleted Post");
 			res.redirect("/myfavorites");
 		} catch (err) {
