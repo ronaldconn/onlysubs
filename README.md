@@ -81,7 +81,7 @@ validator
  
 # Lessons Learned
 
-coming soon!
+Utilizing callback functions on the server side code to build a modular and scalable backend allowed me to handle large data scrapes and parsing by keeping load times and computaitonal complexity low. This was a must to distill the information I needed to render for the user without have to save it all to a DB or timeout the client or server. I learned how to better simplify backend routes by focusing on OOP and improved app architecture.
 
 # Future optimizations
 - New Versions
