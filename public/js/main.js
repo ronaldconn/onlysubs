@@ -28,7 +28,7 @@ async function wrenchClick(){
                 
             }) 
         }).then(
-        alert("Favorite added")
+        console.log("Favorite added")
         )
     
        
