@@ -44,7 +44,10 @@ module.exports = {
           userId: req.user._id
       });
       await Favorite.remove({ year: null })
-			res.render("myfavorites.ejs", { favorite: favorite });
+			res.render("myfavorites.ejs", { 
+        favorite: favorite,
+        user: req.user 
+      });
       console.log(favorite)
 		} catch (err) {
 			console.log(err);
