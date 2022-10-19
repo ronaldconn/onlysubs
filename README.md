@@ -11,7 +11,7 @@ The OnlySubarus app is an app built using MVC Architecture. It has user authenti
 
 The app searches all junkyards within the immediate area for 90's subarus. There app is not bulky and there are no ads. This allows the user to find the car they wish to pull parts from.
 
-The idea for the app came to be as I was standing in a junkyard looking for a car in 100 degree weather. My phone screen was obscured by the sun's glare and the junkyards browser based web-search took a long, long time to load. Their site is extermely heavy, and the ads make finding the info I wanted very frustrating.
+The idea for the app came to be as I was standing in a junkyard looking for a car in 100 degree weather. My phone screen was obscured by the sun's glare and the junkyards browser based web-search took a long, long time to load. Their site is extremely heavy, and the ads make finding the info I wanted very frustrating.
 
 Sweating and tired, I decided I needed a way to find cars quickly. 
 
